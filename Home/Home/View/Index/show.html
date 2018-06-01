@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前台</title>
+</head>
+<body>
+<p>用户收藏信息展示</p>
+<table border="1">
+    <tr>
+    <td>歌手</td>
+    <td>歌曲</td>
+    <td>专辑名称</td>
+    <td>用户名</td>
+    </tr>
+<volist name="data" id="vo">
+        <tr>
+            <td>{$vo.man}</td>
+            <td>{$vo.song}</td>
+            <td>{$vo.zuanji}</td>
+            <td>{$vo.user}</td>
+        </tr>
+</volist>
+</table>
+<HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="100%" color=#987cb9 SIZE=1>
+<p>输入搜索框，可以输入歌手，歌曲，专辑名查询</p>
+<form action="__URL__/search" method="post">
+    <input type="text" name="search">
+    <input type="submit" value="搜索">
+</form>
+</body>
+</html>
