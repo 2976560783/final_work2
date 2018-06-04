@@ -6,12 +6,26 @@
 </head>
 <body>
 <p>歌手信息</p>
-<volist name="data" id="vo">
-    歌手编号：{$vo.id}<br>
-    歌手名：{$vo.name}<br>
-    性别：{$vo.sex}<br>
-    歌手地区：{$vo.area}<br>
-    所属公司：{$vo.company}
-</volist>
+<table border="1">
+
+    <tr>
+        <td>歌手编号</td>
+        <td>歌手名</td>
+        <td>性别</td>
+        <td>歌手地区</td>
+        <td> 所属公司</td>
+    </tr>
+    <volist name="data" id="vo">
+        <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.name}</td>
+            <td>{$vo.sex}</td>
+            <td>{$vo.area}</td>
+            <td>{$vo.company}</td>
+            <td><a href="{:U('collect','key=man&value='.$vo['name'])}">收藏</a></td>
+        </tr>
+    </volist>
+</table>
+
 </body>
 </html>

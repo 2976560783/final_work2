@@ -24,6 +24,7 @@
             <td><?php echo ($vo["man_id"]); ?></td>
             <td><?php echo ($vo["sequence"]); ?></td>
             <td><?php echo ($vo["singer"]); ?></td>
+            <td><a href="<?php echo U('collect','key=song&value='.$vo['song']);?>">收藏</a></td>
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 

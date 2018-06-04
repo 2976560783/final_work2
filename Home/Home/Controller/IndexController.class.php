@@ -18,8 +18,15 @@ class IndexController extends Controller {
             $collect=M('collect');
             $result = $collect->where("user='%s'",I('post.name'))->select();
             session('name', I('post.name'));
-            $this->assign('data',$result);
-            $this->display('show');
+            if($result){
+                $this->assign('data',$result);
+                $this->display('show');
+            }else{
+                echo '未登录,无用户收藏信息';
+                $this->assign('data',$result);
+                $this->display('show');
+            }
+
         } else {
             $this->error('用户名或者密码错误');
         }
@@ -70,5 +77,28 @@ class IndexController extends Controller {
             echo '注册失败，请再次尝试';
             $this->display('regist');
         }
+    }
+
+    public function collect(){
+
+        $table=M("collect");
+        $key=I('key');
+        if(session('name')){
+            $data['user']=session('name');
+            $data[$key]=I('value');
+            $table->data($data)->add();
+            $this->error('收藏成功');
+            //$this->display('show');
+        }else{
+            echo '未登录，不能收藏';
+            //$this->display('show');
+            $this->error('收藏失败');
+        }
+
+
+    }
+    public function test(){
+        echo 'index/test';
+
     }
 }

@@ -6,10 +6,20 @@
 </head>
 <body>
 <p>专辑信息</p>
+<table border="1">
+    <tr>
+        <td>专辑编号</td>
+        <td>发行日期</td>
+        <td>歌手名</td>
+    </tr>
 <volist name="data" id="vo">
-    专辑编号：{$vo.id}<br>
-    发行日期：{$vo.date}<br>
-    歌手名：{$vo.man_name}<br>
+    <tr>
+        <td>{$vo.id}</td>
+        <td>{$vo.date}</td>
+        <td>{$vo.man_name}</td>
+        <td><a href="{:U('collect','key=zuanji&value='.$vo['zuanji'])}">收藏</a></td>
+    </tr>
 </volist>
+</table>
 </body>
 </html>
