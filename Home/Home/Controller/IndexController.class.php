@@ -12,7 +12,7 @@ class IndexController extends Controller {
     {
         $user = M('user');
         $condition['password'] = I('post.password');
-        $condition['name'] = I('name');
+        $condition['name'] = I('post.name');
         $flag = $user->where($condition)->find();
         if ($flag) {
             $collect=M('collect');
@@ -87,6 +87,9 @@ class IndexController extends Controller {
             $data['user']=session('name');
             $data[$key]=I('value');
             $table->data($data)->add();
+            console.log('收藏成功');
+            //window.location.href ="{U('Index/show')}";
+
             $this->error('收藏成功');
             //$this->display('show');
         }else{
@@ -96,6 +99,9 @@ class IndexController extends Controller {
         }
 
 
+    }
+    public function show(){
+        $this->display();
     }
     public function test(){
         echo 'index/test';

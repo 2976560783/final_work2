@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作数据</title>
+</head>
+<body>
+<p>操作数据</p>
+<!--
+<map name="Map">
+    <area shape="rect" href="__MODULE/Index/curd?type_link=test">
+</map>
+-->
+<a href="{:U('curd','table=admin_user')}">管理员数据管理</a>
+<a href="{:U('curd','table=collect')}">前台用户数据管理</a>
+<a href="{:U('curd','table=user')}">前台用户登录信息管理</a>
+<a href="{:U('curd','table=search_man')}">歌手数据管理</a>
+<a href="{:U('curd','table=search_song')}">歌曲数据管理</a>
+<a href="{:U('curd','table=search_zuanji')}">专辑数据管理</a>
+<if condition="($_GET['table'] eq 'admin_user')">
+    <include file="./Admin/Home/View/Table/admin_user.html"/>
+</if>
+
+<if condition="($_GET['table'] eq 'collect')">
+    <include file="./Admin/Home/View/Table/collect.html"/>
+</if>
+<if condition="($_GET['table'] eq 'user')">
+    <include file="./Admin/Home/View/Table/user.html"/>
+</if>
+<if condition="($_GET['table'] eq 'search_man')">
+    <include file="./Admin/Home/View/Table/search_man.html"/>
+</if>
+<if condition="($_GET['table'] eq 'search_song')">
+    <include file="./Admin/Home/View/Table/search_song.html"/>
+</if>
+<if condition="($_GET['table'] eq 'search_zuanji')">
+    <include file="./Admin/Home/View/Table/search_zuanji.html"/>
+</if>
+
+</body>
+</html>
+
+
+
+<!--
+<script>
+    function loadXMLDoc(){
+        var xmlhttp;
+        if(window.XMLHttpRequest){
+            xmlhttp = new XMLHttpRequest();
+        }else{
+            xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+        }
+        xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status ==200){
+                document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","__URL__/curd",true);
+        xmlhttp.send();
+    }
+</script>
+
+<button type="button" onclick="loadXMLDoc()">数据请求</button>
+<div id="myDiv"></div>
+-->
