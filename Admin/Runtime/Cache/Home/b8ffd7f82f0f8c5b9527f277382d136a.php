@@ -3,6 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>操作数据</title>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            /*
+            $("#showTest").click(function () {
+                $.ajax({url:"/final_work2/admin.php?s=/Home/Index/test.html",success:function(result){
+                        $("#show").html(result);
+                    }});
+            });
+            */
+
+            $("#showOperate").click(function () {
+                $.ajax({url:"/final_work2/admin.php?s=/Home/Index/read",
+                    data:{table:"admin_user"},
+                    type:"POST",
+                    datatype:"JSON",
+                    success:function(result){
+                        $("#show").html(result);
+                    }});
+            });
+
+        });
+    </script>
 </head>
 <body>
 <p>操作数据</p>
@@ -162,7 +186,9 @@
 </table>
 </body>
 </html><?php endif; ?>
-
+<p id="showTest">展示test</p>
+<p id="showOperate">展示operate</p>
+<div id="show"></div>
 </body>
 </html>
 

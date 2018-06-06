@@ -52,13 +52,16 @@ class IndexController extends Controller {
     }
 
     public function test(){
-        echo 'test';
+        echo 'controller/test';
     }
 
-    public function read($str){
+    public function read(){
+        $str=$_POST['table'];
+        echo $str;
         $table= M($str);
         $data=$table->select();
         $this->assign('data',$data);
-        //$this->display('Table:'.$str);
+        $this->display('Table:'.$str);
+
     }
 }
