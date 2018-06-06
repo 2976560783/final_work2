@@ -21,7 +21,7 @@ class IndexController extends Controller {
         }
     }
 
-
+/*初始版本
     public function curd(){
         //echo 'table'.$table."<br>";
         //$this->dispaly('test');
@@ -51,13 +51,14 @@ class IndexController extends Controller {
         $this->display('operate');
     }
 
+*/
+
     public function test(){
-        echo 'controller/test';
+        echo 'Indecxcontroller/test';
     }
 
     public function read(){
         $str=$_POST['table'];
-        echo $str;
         $table= M($str);
         $data=$table->select();
         $this->assign('data',$data);

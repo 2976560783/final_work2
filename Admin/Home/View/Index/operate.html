@@ -15,14 +15,15 @@
             });
             */
 
-            $("#showOperate").click(function () {
+            $("#admin_user").click(function () {
                 $.ajax({url:"__CONTROLLER__/read",
                     data:{table:"admin_user"},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
                         $("#show").html(result);
-                    }});
+                    }
+                });
             });
 
         });
@@ -31,10 +32,8 @@
 <body>
 <p>操作数据</p>
 <!--
-<map name="Map">
-    <area shape="rect" href="__MODULE/Index/curd?type_link=test">
-</map>
--->
+初级版本
+
 <a href="{:U('curd','table=admin_user')}">管理员数据管理</a>
 <a href="{:U('curd','table=collect')}">前台用户数据管理</a>
 <a href="{:U('curd','table=user')}">前台用户登录信息管理</a>
@@ -60,8 +59,9 @@
 <if condition="($_GET['table'] eq 'search_zuanji')">
     <include file="./Admin/Home/View/Table/search_zuanji.html"/>
 </if>
-<p id="showTest">展示test</p>
-<p id="showOperate">展示operate</p>
+-->
+<!-- 高级版  -->
+<button id="admin_user">管理员数据管理</button>
 <div id="show"></div>
 </body>
 </html>
