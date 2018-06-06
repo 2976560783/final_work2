@@ -55,10 +55,8 @@
                 $("tr.formUpdate").toggle();
             });
 
-            $("tr.formDelete").css('display','none');
-            $("#delete").click(function () {
-                $("tr.formDelete").toggle();
-            });
+           // $("tr.formDelete").css('display','none');
+
 
             $("tr.formInsert").css('display','none');
             $("#insert").click(function () {
@@ -69,9 +67,10 @@
             $("#updateSubmit").click(function () {
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/update",
-                    data:{table:"admin_user",id:document.getElementById("id").value,
-                        name:document.getElementById("name").value,
-                        password:document.getElementById("password").value},
+                    data:{table:"admin_user",
+                        id:document.getElementById("idUpdate").value,
+                        name:document.getElementById("nameUpdate").value,
+                        password:document.getElementById("passwordUpdate").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -92,11 +91,16 @@
                     }
                 });
             });
+            $("button.delete").click(function () {
+                var $str=$('button.delete').val();
+                alert($str);
+            });
+            /*
             $("#deleteSubmit").click(function () {
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/delete",
                     data:{table:"admin_user",
-                        name:document.getElementById("name").value},
+                        id:},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -104,34 +108,70 @@
                     }
                 });
             });
-
-
-
-
+            */
         });
+        function deleteId(id) {
+
+            $.ajax({
+                url:"/final_work2/admin.php?s=/Home/CURD/delete",
+                data:{id:id,
+                table:'admin_user'},
+                type:"POST",
+                datatype:"JSON",
+                success:function(result){
+                    $("#show").html(result);
+                }
+                }
+            )
+        }
     </script>
+
 </head>
 <body>
 <table border="1">
     <tr>
+        <td>id</td>
         <td>用户名</td>
         <td>密码</td>
         <td>操作</td>
     </tr>
     <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+            <td><?php echo ($vo["id"]); ?></td>
             <td><?php echo ($vo["name"]); ?></td>
             <td><?php echo ($vo["password"]); ?></td>
             <td>
-                <button id="update">更新</button>
-                <button id="delete">删除</button>
+                <button onclick="deleteId(<?php echo ($vo['id']); ?>)">删除</button>
             </td>
-
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <table>
     <tr>
-        <td> <button id="insert">插入</button></td>
+        <td><button id="insert">插入</button></td>
+        <td><button id="update">更新</button></td>
     </tr>
+</table>
+<table>
+    <tr class="formUpdate">
+        <td >
+            id：<input type="text" id="idUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            用户名：<input type="text" id="nameUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            密码：<input type="password" id="passwordUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td><button id="updateSubmit">提交</button></td>
+    </tr>
+
+
+
     <tr class="formInsert">
         <td>用户名：<input type="text" id="nameInsert"></td>
     </tr>
@@ -146,24 +186,6 @@
 </html>
 
 <!--
-  <tr class="formUpdate">
-      <td >
-          id：<input type="text" id="idUpdate">
-      </td>
-  </tr>
-  <tr class="formUpdate">
-      <td >
-          用户名：<input type="text" id="nameUpdate">
-      </td>
-  </tr>
-  <tr class="formUpdate">
-      <td >
-          密码：<input type="password" id="passwordUpdate">
-      </td>
-  </tr>
-  <tr class="formUpdate">
-      <td><button id="updateSubmit">提交</button></td>
-  </tr>
 
   <tr class="formDelete">
       <td>为了安全起见，本系统设置为只能通过输入用户名删除用户</td>

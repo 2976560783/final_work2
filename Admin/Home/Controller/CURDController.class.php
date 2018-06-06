@@ -20,13 +20,15 @@ class CURDController extends Controller {
     public function delete(){
         $str=$_POST['table'];
         if($str=='admin_user'){
-            $name=$_POST['name'];
+            $id=$_POST['id'];
         }
+
         $table=M($str);
-        $table->where("name='%s'".$name)->delete();
+        $table->where('id='.$id)->delete();
         $data=$table->select();
         $this->assign('data',$data);
         $this->display('Table:'.$str);
+
     }
 
     public function insert(){
@@ -37,8 +39,6 @@ class CURDController extends Controller {
             $condition['password']=$_POST['password'];
         }
         $table= M($str);
-        //本句
-
         $table->add($condition);
         $data=$table->select();
         $this->assign('data',$data);
