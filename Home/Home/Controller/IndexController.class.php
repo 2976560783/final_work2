@@ -72,11 +72,12 @@ class IndexController extends Controller {
 
     public function collect()
     {
+        /*
          $table=I('post.table');
          echo 'home:Index:collect'.$table."<bt>";
          $id=I('post.id');
         echo 'id'.$id;
- /*
+
         $table = M("collect");
         $data = I('post.value');
         $sit = I('post.sit');
@@ -84,41 +85,54 @@ class IndexController extends Controller {
         echo 'data'.$data;
         //$data['user']=session('name');
         //echo 'user'.$data['user'];
+*/
 
         if (session('name')) {
+            $tableTo=I('post.tableTo');
+            $tableFrom=I('post.tableFrom');
+            $id=I('post.id');
             $data['user'] = session('name');
-            $data[$sit] =I('post.value');
+            $tableFrom=M($tableFrom);
+            $resultFrom=$tableFrom->where('id='.$id)->find();
+            unset($resultFrom['id']);
+            $resultFrom['user']=session('name');
+            $tableTo=M($tableTo);
+            $tableTo->data($resultFrom)->add();
+            $result = $tableTo->select();
 
-            $table->data($data)->add();
-            $collect = M('collect');
-            $result = $collect->select();
             //print_r($result);
+            //echo $tableTo;
+
             $this->assign('data',$result);
-            $this->display('show');
+            $this->display('Collect:'.I('post.tableTo'));
             //$this->display('show');
+
 
         }else{
             echo '未登录，不能收藏';
             //$this->display('show');
             $this->error('收藏失败');
+
         }
-
-
-*/
         }
 
     public function show(){
         //echo 'Index/show';
         $name=session('name');
         //echo 'name'.$name;
-        $collect=M('collect');
+        $table=I('post.table');
+        $collect=M($table);
         $data=$collect->where("user='%s'",$name)->select();
         $this->assign('data',$data);
-        $this->display('show');
+        $this->display('Collect:'.$table);
 
     }
     public function test(){
         echo 'index/test';
+
+    }
+    public function collectResult()
+    {
 
     }
 }

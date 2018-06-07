@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <title>歌曲信息</title>
     <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <script>
+        function collectIt(id) {
+            $.ajax({
+                    url:"__URL__/collect",
+                    data:{
+                        id:id,
+                        //dd:'ss'
+                        //value:name,
+                        //
+                        tableFrom:'search_song',
+                        tableTo:'collect_song'
+                    },
+                    type:"POST",
+                    datatype:"JSON",
+                    success:function(result){
+                        $("#showSong").html(result);
+                    }
+                }
+            )
+        }
+    </script>
 </head>
 <body>
 <p>歌曲信息</p>
@@ -26,7 +47,7 @@
             <td>{$vo.man_id}</td>
             <td>{$vo.sequence}</td>
             <td>{$vo.singer}</td>
-            <td><a href="{:U('collect','key=song&value='.$vo['song'])}">收藏</a></td>
+            <td><button onclick="collectIt({$vo.id})">收藏</button></td>
         </tr>
 
     </volist>

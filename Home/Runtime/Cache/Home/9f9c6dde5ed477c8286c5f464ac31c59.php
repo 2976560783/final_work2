@@ -13,12 +13,13 @@
                         //dd:'ss'
                         //value:name,
                        //
-                         table:'man'
+                        tableFrom:'search_man',
+                         tableTo:'collect_man'
                     },
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
-                        $("#show").html(result);
+                        $("#showMan").html(result);
                     }
                 }
             )

@@ -20,22 +20,63 @@
     </script>
     <script>
         $(document).ready(function () {
-            $("#showCollect").click(function () {
+            $("#showCollectMan").click(function () {
                 $.ajax({url:"/final_work2/index.php?s=/Home/Index/show",
-                    data:{table:"collect"},
+                    data:{table:"collect_man"},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
-                        $("#show").html(result);
+                        $("#showMan").html(result);
                     }
                 });
+                $("#showMan").toggle(500);
+            });
+            $("#showCollectSong").click(function () {
+                $.ajax({url:"/final_work2/index.php?s=/Home/Index/show",
+                    data:{table:"collect_song"},
+                    type:"POST",
+                    datatype:"JSON",
+                    success:function(result){
+                        $("#showSong").html(result);
+                    }
+                });
+                $("#showSong").toggle(500);
+            });
+            $("#showCollectZuanji").click(function () {
+                $.ajax({url:"/final_work2/index.php?s=/Home/Index/show",
+                    data:{table:"collect_zuanji"},
+                    type:"POST",
+                    datatype:"JSON",
+                    success:function(result){
+                        $("#showZuanji").html(result);
+                    }
+                });
+                $("#showZuanji").toggle(500);
             });
         })
     </script>
 </head>
 <body>
-<button id="showCollect">查看已收藏</button>
-<div id="show"></div>
+<table>
+    <tr>
+        <td><button id="showCollectMan">查看已收藏歌手</button></td>
+    </tr>
+    <tr>
+        <td><button id="showCollectSong">查看已收藏歌曲</button></td>
+    </tr>
+    <tr>
+        <td><button id="showCollectZuanji">查看已收藏专辑</button></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><div id="showMan"></div></td>
+        <td><div id="showSong"></div></td>
+        <td><div id="showZuanji"></div></td>
+    </tr>
+</table>
+
 <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="100%" color=#987cb9 SIZE=1>
 <p>输入搜索框，可以输入歌手，歌曲，专辑名查询</p>
 <input type="text" id="data" onkeyup="searchData()"/>

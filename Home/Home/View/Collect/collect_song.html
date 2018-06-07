@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>歌曲信息</p>
+<table border="1">
+    <tr>
+        <th>歌曲编号</th>
+        <th>专辑名</th>
+        <th>歌曲风格</th>
+        <th>语种</th>
+        <th>歌手编号</th>
+        <th>点播频率</th>
+        <th>歌手姓名</th>
+        <th>用户</th>
+    </tr>
+    <volist name="data" id="vo">
+        <tr>
+            <td>{$vo.id}</td>
+            <td>{$vo.zuanji}</td>
+            <td>{$vo.style}</td>
+            <td>{$vo.language}</td>
+            <td>{$vo.man_id}</td>
+            <td>{$vo.sequence}</td>
+            <td>{$vo.singer}</td>
+            <td>{$vo.user}</td>
+        </tr>
+
+    </volist>
+</table>
+</body>
+</html>
