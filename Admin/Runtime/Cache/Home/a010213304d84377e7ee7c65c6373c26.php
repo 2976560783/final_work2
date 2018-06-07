@@ -26,8 +26,9 @@
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/update",
                     data:{table:"search_zuanji",
                         id:document.getElementById("idUpdate").value,
-                        name:document.getElementById("nameUpdate").value,
-                        password:document.getElementById("passwordUpdate").value},
+                        man_name:document.getElementById("man_nameUpdate").value,
+                        date:document.getElementById("dateUpdate").value,
+                        zuanji:document.getElementById("zuanjiUpdate").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -39,18 +40,15 @@
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/insert",
                     data:{table:"search_zuanji",
-                        name:document.getElementById("nameInsert").value,
-                        password:document.getElementById("passwordInsert").value},
+                        man_name:document.getElementById("man_nameInsert").value,
+                        date:document.getElementById("dateInsert").value,
+                        zuanji:document.getElementById("zuanjiInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
                         $("#show").html(result);
                     }
                 });
-            });
-            $("button.delete").click(function () {
-                var $str=$('button.delete').val();
-                alert($str);
             });
         });
         function deleteId(id) {
@@ -102,12 +100,17 @@
     </tr>
     <tr class="formUpdate">
         <td >
-            用户名：<input type="text" id="nameUpdate">
+            日期：<input type="date" id="dateUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
         <td >
-            密码：<input type="password" id="passwordUpdate">
+            歌手：<input type="text" id="man_nameUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            专辑：<input type="text" id="zuanjiUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
@@ -117,10 +120,19 @@
 
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
-        <td>用户名：<input type="text" id="nameInsert"></td>
+        <td >
+            日期：<input type="date" id="dateInsert">
+        </td>
     </tr>
     <tr class="formInsert">
-        <td>密码：<input type="password" id="passwordInsert"></td>
+        <td >
+            歌手：<input type="text" id="man_nameInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            专辑：<input type="text" id="zuanjiInsert">
+        </td>
     </tr>
     <tr class="formInsert">
         <td><button id="insertSubmit">提交</button></td>

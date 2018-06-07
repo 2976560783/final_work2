@@ -26,8 +26,14 @@
                 $.ajax({url:"__MODULE__/CURD/update",
                     data:{table:"search_song",
                         id:document.getElementById("idUpdate").value,
-                        name:document.getElementById("nameUpdate").value,
-                        password:document.getElementById("passwordUpdate").value},
+                        song:document.getElementById("songUpdate").value,
+                        zuanji:document.getElementById("zuanjiUpdate").value,
+                        style:document.getElementById("styleUpdate").value,
+                        language:document.getElementById("languageUpdate").value,
+                        man_id:document.getElementById("man_idUpdate").value,
+                        sequence:document.getElementById("sequenceUpdate").value,
+                        singer:document.getElementById("singerUpdate").value
+                    },
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -39,8 +45,13 @@
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"__MODULE__/CURD/insert",
                     data:{table:"search_song",
-                        name:document.getElementById("nameInsert").value,
-                        password:document.getElementById("passwordInsert").value},
+                        song:document.getElementById("songInsert").value,
+                        zuanji:document.getElementById("zuanjiInsert").value,
+                        style:document.getElementById("styleInsert").value,
+                        language:document.getElementById("languageInsert").value,
+                        man_id:document.getElementById("man_idInsert").value,
+                        sequence:document.getElementById("sequenceInsert").value,
+                        singer:document.getElementById("singerInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -152,37 +163,37 @@
 
 
     <tr class="formInsert"><td>数据插入</td></tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             歌曲名：<input type="text" id="songInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             专辑：<input type="text" id="zuanjiInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             风格：<input type="text" id="styleInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             语言：<input type="text" id="languageInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             歌手编号：<input type="text" id="man_idInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             点播频率：<input type="text" id="sequenceInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             歌手：<input type="text" id="singerInsert">
         </td>

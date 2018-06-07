@@ -330,8 +330,10 @@
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/update",
                     data:{table:"collect",
                         id:document.getElementById("idUpdate").value,
-                        name:document.getElementById("nameUpdate").value,
-                        password:document.getElementById("passwordUpdate").value},
+                        man:document.getElementById("manUpdate").value,
+                        zuanji:document.getElementById("zuanjiUpdate").value,
+                        song:document.getElementById("songUpdate").value,
+                        user:document.getElementById("userUpdate").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -343,8 +345,10 @@
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/insert",
                     data:{table:"collect",
-                        name:document.getElementById("nameInsert").value,
-                        password:document.getElementById("passwordInsert").value},
+                        man:document.getElementById("manInsert").value,
+                        zuanji:document.getElementById("zuanjiInsert").value,
+                        song:document.getElementById("songInsert").value,
+                        user:document.getElementById("userInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -378,17 +382,19 @@
 <table border="1">
     <tr>
         <td>id</td>
-        <td>姓名</td>
+        <td>歌手姓名</td>
         <td>专辑</td>
-        <td>用户</td>
         <td>歌曲</td>
+        <td>用户</td>
+
     </tr>
     <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
             <td><?php echo ($vo["id"]); ?></td>
-            <td><?php echo ($vo["name"]); ?></td>
+            <td><?php echo ($vo["man"]); ?></td>
             <td><?php echo ($vo["zuanji"]); ?></td>
-            <td><?php echo ($vo["user"]); ?></td>
             <td><?php echo ($vo["song"]); ?></td>
+            <td><?php echo ($vo["user"]); ?></td>
+
             <td>
                 <button onclick="deleteId(<?php echo ($vo['id']); ?>)">删除</button>
             </td>
@@ -409,12 +415,22 @@
     </tr>
     <tr class="formUpdate">
         <td >
-            用户名：<input type="text" id="nameUpdate">
+            歌手姓名：<input type="text" id="manUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
         <td >
-            密码：<input type="password" id="passwordUpdate">
+            专辑：<input type="text" id="zuanjiUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            歌曲：<input type="text" id="songUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            用户：<input type="text" id="userUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
@@ -424,10 +440,24 @@
 
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
-        <td>用户名：<input type="text" id="nameInsert"></td>
+        <td >
+            歌手姓名：<input type="text" id="manInsert">
+        </td>
     </tr>
     <tr class="formInsert">
-        <td>密码：<input type="password" id="passwordInsert"></td>
+        <td >
+            专辑：<input type="text" id="zuanjiInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            歌曲：<input type="text" id="songInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            用户：<input type="text" id="userInsert">
+        </td>
     </tr>
     <tr class="formInsert">
         <td><button id="insertSubmit">提交</button></td>
@@ -593,7 +623,9 @@
                     data:{table:"search_man",
                         id:document.getElementById("idUpdate").value,
                         name:document.getElementById("nameUpdate").value,
-                        password:document.getElementById("passwordUpdate").value},
+                        sex:document.getElementById("sexUpdate").value,
+                        area:document.getElementById("areaUpdate").value,
+                        company:document.getElementById("companyUpdate").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -606,7 +638,9 @@
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/insert",
                     data:{table:"search_man",
                         name:document.getElementById("nameInsert").value,
-                        password:document.getElementById("passwordInsert").value},
+                        sex:document.getElementById("sexInsert").value,
+                        area:document.getElementById("areaInsert").value,
+                        company:document.getElementById("companyInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -671,12 +705,22 @@
     </tr>
     <tr class="formUpdate">
         <td >
-            用户名：<input type="text" id="nameUpdate">
+            姓名：<input type="text" id="nameUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
         <td >
-            密码：<input type="password" id="passwordUpdate">
+            性别：<input type="text" id="sexUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            地区：<input type="text" id="areaUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            公司：<input type="text" id="companyUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
@@ -686,10 +730,25 @@
 
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
-        <td>用户名：<input type="text" id="nameInsert"></td>
-    </tr>
     <tr class="formInsert">
-        <td>密码：<input type="password" id="passwordInsert"></td>
+        <td >
+            姓名：<input type="text" id="nameInsert">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            性别：<input type="text" id="sexInsert">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            地区：<input type="text" id="areaInsert">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            公司：<input type="text" id="companyInsert">
+        </td>
     </tr>
     <tr class="formInsert">
         <td><button id="insertSubmit">提交</button></td>
@@ -725,8 +784,14 @@
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/update",
                     data:{table:"search_song",
                         id:document.getElementById("idUpdate").value,
-                        name:document.getElementById("nameUpdate").value,
-                        password:document.getElementById("passwordUpdate").value},
+                        song:document.getElementById("songUpdate").value,
+                        zuanji:document.getElementById("zuanjiUpdate").value,
+                        style:document.getElementById("styleUpdate").value,
+                        language:document.getElementById("languageUpdate").value,
+                        man_id:document.getElementById("man_idUpdate").value,
+                        sequence:document.getElementById("sequenceUpdate").value,
+                        singer:document.getElementById("singerUpdate").value
+                    },
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -738,8 +803,13 @@
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/insert",
                     data:{table:"search_song",
-                        name:document.getElementById("nameInsert").value,
-                        password:document.getElementById("passwordInsert").value},
+                        song:document.getElementById("songInsert").value,
+                        zuanji:document.getElementById("zuanjiInsert").value,
+                        style:document.getElementById("styleInsert").value,
+                        language:document.getElementById("languageInsert").value,
+                        man_id:document.getElementById("man_idInsert").value,
+                        sequence:document.getElementById("sequenceInsert").value,
+                        singer:document.getElementById("singerInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -810,12 +880,37 @@
     </tr>
     <tr class="formUpdate">
         <td >
-            用户名：<input type="text" id="nameUpdate">
+            歌曲名：<input type="text" id="songUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
         <td >
-            密码：<input type="password" id="passwordUpdate">
+            专辑：<input type="text" id="zuanjiUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            风格：<input type="text" id="styleUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            语言：<input type="text" id="languageUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            歌手编号：<input type="text" id="man_idUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            点播频率：<input type="text" id="sequenceUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            歌手：<input type="text" id="singerUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
@@ -825,10 +920,39 @@
 
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
-        <td>用户名：<input type="text" id="nameInsert"></td>
+        <td >
+            歌曲名：<input type="text" id="songInsert">
+        </td>
     </tr>
     <tr class="formInsert">
-        <td>密码：<input type="password" id="passwordInsert"></td>
+        <td >
+            专辑：<input type="text" id="zuanjiInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            风格：<input type="text" id="styleInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            语言：<input type="text" id="languageInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            歌手编号：<input type="text" id="man_idInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            点播频率：<input type="text" id="sequenceInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            歌手：<input type="text" id="singerInsert">
+        </td>
     </tr>
     <tr class="formInsert">
         <td><button id="insertSubmit">提交</button></td>
@@ -864,8 +988,9 @@
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/update",
                     data:{table:"search_zuanji",
                         id:document.getElementById("idUpdate").value,
-                        name:document.getElementById("nameUpdate").value,
-                        password:document.getElementById("passwordUpdate").value},
+                        man_name:document.getElementById("man_nameUpdate").value,
+                        date:document.getElementById("dateUpdate").value,
+                        zuanji:document.getElementById("zuanjiUpdate").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -877,18 +1002,15 @@
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/insert",
                     data:{table:"search_zuanji",
-                        name:document.getElementById("nameInsert").value,
-                        password:document.getElementById("passwordInsert").value},
+                        man_name:document.getElementById("man_nameInsert").value,
+                        date:document.getElementById("dateInsert").value,
+                        zuanji:document.getElementById("zuanjiInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
                         $("#show").html(result);
                     }
                 });
-            });
-            $("button.delete").click(function () {
-                var $str=$('button.delete').val();
-                alert($str);
             });
         });
         function deleteId(id) {
@@ -940,12 +1062,17 @@
     </tr>
     <tr class="formUpdate">
         <td >
-            用户名：<input type="text" id="nameUpdate">
+            日期：<input type="date" id="dateUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
         <td >
-            密码：<input type="password" id="passwordUpdate">
+            歌手：<input type="text" id="man_nameUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            专辑：<input type="text" id="zuanjiUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
@@ -955,10 +1082,19 @@
 
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
-        <td>用户名：<input type="text" id="nameInsert"></td>
+        <td >
+            日期：<input type="date" id="dateInsert">
+        </td>
     </tr>
     <tr class="formInsert">
-        <td>密码：<input type="password" id="passwordInsert"></td>
+        <td >
+            歌手：<input type="text" id="man_nameInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            专辑：<input type="text" id="zuanjiInsert">
+        </td>
     </tr>
     <tr class="formInsert">
         <td><button id="insertSubmit">提交</button></td>

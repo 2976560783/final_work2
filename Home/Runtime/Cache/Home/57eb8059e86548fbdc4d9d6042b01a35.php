@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>前台</title>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+
 </head>
 <body>
 
 <table border="1" align="center" valign="middle">
-    <p style="width: 100%;height: 45px;display: block;line-height: 45px;text-align: center;">用户收藏信息展示</p>
     <tr>
     <td>歌手</td>
     <td>歌曲</td>
@@ -21,12 +22,14 @@
             <td><?php echo ($vo["user"]); ?></td>
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
-<HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="100%" color=#987cb9 SIZE=1>
-<p>输入搜索框，可以输入歌手，歌曲，专辑名查询</p>
+
+<!--
 <form action="/final_work2/index.php?s=/Home/Index/search" method="post">
     <input type="text" name="search">
     <input type="submit" value="搜索">
 </form>
+
+-->
 
 </body>
 </html>

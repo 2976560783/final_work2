@@ -23,7 +23,7 @@
                 $.ajax({url:"__MODULE__/CURD/update",
                     data:{table:"collect",
                         id:document.getElementById("idUpdate").value,
-                        name:document.getElementById("nameUpdate").value,
+                        man:document.getElementById("manUpdate").value,
                         zuanji:document.getElementById("zuanjiUpdate").value,
                         song:document.getElementById("songUpdate").value,
                         user:document.getElementById("userUpdate").value},
@@ -38,7 +38,7 @@
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"__MODULE__/CURD/insert",
                     data:{table:"collect",
-                        name:document.getElementById("nameInsert").value,
+                        man:document.getElementById("manInsert").value,
                         zuanji:document.getElementById("zuanjiInsert").value,
                         song:document.getElementById("songInsert").value,
                         user:document.getElementById("userInsert").value},
@@ -75,7 +75,7 @@
 <table border="1">
     <tr>
         <td>id</td>
-        <td>姓名</td>
+        <td>歌手姓名</td>
         <td>专辑</td>
         <td>歌曲</td>
         <td>用户</td>
@@ -84,7 +84,7 @@
     <volist name="data" id="vo">
         <tr>
             <td>{$vo.id}</td>
-            <td>{$vo.name}</td>
+            <td>{$vo.man}</td>
             <td>{$vo.zuanji}</td>
             <td>{$vo.song}</td>
             <td>{$vo.user}</td>
@@ -110,7 +110,7 @@
     </tr>
     <tr class="formUpdate">
         <td >
-            歌手姓名：<input type="text" id="nameUpdate">
+            歌手姓名：<input type="text" id="manUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
@@ -136,7 +136,7 @@
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
         <td >
-            歌手姓名：<input type="text" id="nameInsert">
+            歌手姓名：<input type="text" id="manInsert">
         </td>
     </tr>
     <tr class="formInsert">

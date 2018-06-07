@@ -15,17 +15,8 @@ class IndexController extends Controller {
         $condition['name'] = I('post.name');
         $flag = $user->where($condition)->find();
         if ($flag) {
-            $collect=M('collect');
-            $result = $collect->where("user='%s'",I('post.name'))->select();
-            session('name', I('post.name'));
-            if($result){
-                $this->assign('data',$result);
-                $this->display('show');
-            }else{
-                echo '未登录,无用户收藏信息';
-                $this->assign('data',$result);
-                $this->display('show');
-            }
+            session('name',$condition['name']);
+            $this->display('main');
 
         } else {
             $this->error('用户名或者密码错误');
@@ -79,19 +70,33 @@ class IndexController extends Controller {
         }
     }
 
-    public function collect(){
+    public function collect()
+    {
+         $table=I('post.table');
+         echo 'home:Index:collect'.$table."<bt>";
+         $id=I('post.id');
+        echo 'id'.$id;
+ /*
+        $table = M("collect");
+        $data = I('post.value');
+        $sit = I('post.sit');
 
-        $table=M("collect");
-        $key=I('key');
-        if(session('name')){
-            $data['user']=session('name');
-            $data[$key]=I('value');
+        echo 'data'.$data;
+        //$data['user']=session('name');
+        //echo 'user'.$data['user'];
+
+        if (session('name')) {
+            $data['user'] = session('name');
+            $data[$sit] =I('post.value');
+
             $table->data($data)->add();
-            console.log('收藏成功');
-            //window.location.href ="{U('Index/show')}";
-
-            $this->error('收藏成功');
+            $collect = M('collect');
+            $result = $collect->select();
+            //print_r($result);
+            $this->assign('data',$result);
+            $this->display('show');
             //$this->display('show');
+
         }else{
             echo '未登录，不能收藏';
             //$this->display('show');
@@ -99,9 +104,18 @@ class IndexController extends Controller {
         }
 
 
-    }
+*/
+        }
+
     public function show(){
-        $this->display();
+        //echo 'Index/show';
+        $name=session('name');
+        //echo 'name'.$name;
+        $collect=M('collect');
+        $data=$collect->where("user='%s'",$name)->select();
+        $this->assign('data',$data);
+        $this->display('show');
+
     }
     public function test(){
         echo 'index/test';

@@ -28,7 +28,7 @@
                         id:document.getElementById("idUpdate").value,
                         man_name:document.getElementById("man_nameUpdate").value,
                         date:document.getElementById("dateUpdate").value,
-                        zunaji:document.getElementById("zuanjiUpdate").value},
+                        zuanji:document.getElementById("zuanjiUpdate").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -42,17 +42,13 @@
                     data:{table:"search_zuanji",
                         man_name:document.getElementById("man_nameInsert").value,
                         date:document.getElementById("dateInsert").value,
-                        zunaji:document.getElementById("zuanjiInsert").value},
+                        zuanji:document.getElementById("zuanjiInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
                         $("#show").html(result);
                     }
                 });
-            });
-            $("button.delete").click(function () {
-                var $str=$('button.delete').val();
-                alert($str);
             });
         });
         function deleteId(id) {

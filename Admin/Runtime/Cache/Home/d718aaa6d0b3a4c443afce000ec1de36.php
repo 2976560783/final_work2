@@ -23,8 +23,10 @@
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/update",
                     data:{table:"collect",
                         id:document.getElementById("idUpdate").value,
-                        name:document.getElementById("nameUpdate").value,
-                        password:document.getElementById("passwordUpdate").value},
+                        man:document.getElementById("manUpdate").value,
+                        zuanji:document.getElementById("zuanjiUpdate").value,
+                        song:document.getElementById("songUpdate").value,
+                        user:document.getElementById("userUpdate").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -36,8 +38,10 @@
                 //var name=document.getElementById("name").value;
                 $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/insert",
                     data:{table:"collect",
-                        name:document.getElementById("nameInsert").value,
-                        password:document.getElementById("passwordInsert").value},
+                        man:document.getElementById("manInsert").value,
+                        zuanji:document.getElementById("zuanjiInsert").value,
+                        song:document.getElementById("songInsert").value,
+                        user:document.getElementById("userInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -71,17 +75,19 @@
 <table border="1">
     <tr>
         <td>id</td>
-        <td>姓名</td>
+        <td>歌手姓名</td>
         <td>专辑</td>
-        <td>用户</td>
         <td>歌曲</td>
+        <td>用户</td>
+
     </tr>
     <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
             <td><?php echo ($vo["id"]); ?></td>
-            <td><?php echo ($vo["name"]); ?></td>
+            <td><?php echo ($vo["man"]); ?></td>
             <td><?php echo ($vo["zuanji"]); ?></td>
-            <td><?php echo ($vo["user"]); ?></td>
             <td><?php echo ($vo["song"]); ?></td>
+            <td><?php echo ($vo["user"]); ?></td>
+
             <td>
                 <button onclick="deleteId(<?php echo ($vo['id']); ?>)">删除</button>
             </td>
@@ -102,12 +108,22 @@
     </tr>
     <tr class="formUpdate">
         <td >
-            用户名：<input type="text" id="nameUpdate">
+            歌手姓名：<input type="text" id="manUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
         <td >
-            密码：<input type="password" id="passwordUpdate">
+            专辑：<input type="text" id="zuanjiUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            歌曲：<input type="text" id="songUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            用户：<input type="text" id="userUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
@@ -117,10 +133,24 @@
 
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
-        <td>用户名：<input type="text" id="nameInsert"></td>
+        <td >
+            歌手姓名：<input type="text" id="manInsert">
+        </td>
     </tr>
     <tr class="formInsert">
-        <td>密码：<input type="password" id="passwordInsert"></td>
+        <td >
+            专辑：<input type="text" id="zuanjiInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            歌曲：<input type="text" id="songInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            用户：<input type="text" id="userInsert">
+        </td>
     </tr>
     <tr class="formInsert">
         <td><button id="insertSubmit">提交</button></td>

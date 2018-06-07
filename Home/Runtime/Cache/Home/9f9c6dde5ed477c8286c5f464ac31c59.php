@@ -3,6 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>歌手</title>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <script>
+        function collectIt(id) {
+            $.ajax({
+                    url:"/final_work2/index.php?s=/Home/Index/collect",
+                    data:{
+                        id:id,
+                        //dd:'ss'
+                        //value:name,
+                       //
+                         table:'man'
+                    },
+                    type:"POST",
+                    datatype:"JSON",
+                    success:function(result){
+                        $("#show").html(result);
+                    }
+                }
+            )
+        }
+    </script>
 </head>
 <body>
 <p>歌手信息</p>
@@ -21,7 +42,7 @@
             <td><?php echo ($vo["sex"]); ?></td>
             <td><?php echo ($vo["area"]); ?></td>
             <td><?php echo ($vo["company"]); ?></td>
-            <td><a href="<?php echo U('collect','key=man&value='.$vo['name']);?>">收藏</a></td>
+            <td><button onclick="collectIt(<?php echo ($vo["id"]); ?>)">收藏</button></td>
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 

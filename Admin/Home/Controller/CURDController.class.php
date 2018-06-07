@@ -12,7 +12,7 @@ class CURDController extends Controller {
         }
         if($str=='collect'){
             $condition['id']=$_POST['id'];
-            $condition['name']=$_POST['name'];
+            $condition['man']=$_POST['man'];
             $condition['zuanji']=$_POST['zuanji'];
             $condition['song']=$_POST['song'];
             $condition['user']=$_POST['user'];
@@ -54,10 +54,7 @@ class CURDController extends Controller {
 
     public function delete(){
         $str=$_POST['table'];
-        if($str=='admin_user'){
-            $id=$_POST['id'];
-        }
-
+        $id=$_POST['id'];
         $table=M($str);
         $table->where('id='.$id)->delete();
         $data=$table->select();
@@ -75,7 +72,7 @@ class CURDController extends Controller {
         }
         if($str=='collect'){
 
-            $condition['name']=$_POST['name'];
+            $condition['man']=$_POST['man'];
             $condition['zuanji']=$_POST['zuanji'];
             $condition['song']=$_POST['song'];
             $condition['user']=$_POST['user'];
@@ -103,8 +100,7 @@ class CURDController extends Controller {
             $condition['singer']=$_POST['singer'];
         }
         if($str=='search_zuanji'){
-
-            $condition['song']=$_POST['song'];
+            $condition['date']=$_POST['date'];
             $condition['zuanji']=$_POST['zuanji'];
             $condition['man_name']=$_POST['man_name'];
         }
