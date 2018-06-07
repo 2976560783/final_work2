@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,12 +23,11 @@
             //表单按钮跳转
             $("#updateSubmit").click(function () {
                 //var name=document.getElementById("name").value;
-                $.ajax({url:"__MODULE__/CURD/update",
+                $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/update",
                     data:{table:"search_zuanji",
                         id:document.getElementById("idUpdate").value,
-                        man_name:document.getElementById("man_nameUpdate").value,
-                        date:document.getElementById("dateUpdate").value,
-                        zunaji:document.getElementById("zuanjiUpdate").value},
+                        name:document.getElementById("nameUpdate").value,
+                        password:document.getElementById("passwordUpdate").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -38,11 +37,10 @@
             });
             $("#insertSubmit").click(function () {
                 //var name=document.getElementById("name").value;
-                $.ajax({url:"__MODULE__/CURD/insert",
+                $.ajax({url:"/final_work2/admin.php?s=/Home/CURD/insert",
                     data:{table:"search_zuanji",
-                        man_name:document.getElementById("man_nameInsert").value,
-                        date:document.getElementById("dateInsert").value,
-                        zunaji:document.getElementById("zuanjiInsert").value},
+                        name:document.getElementById("nameInsert").value,
+                        password:document.getElementById("passwordInsert").value},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -58,7 +56,7 @@
         function deleteId(id) {
 
             $.ajax({
-                    url:"__MODULE__/CURD/delete",
+                    url:"/final_work2/admin.php?s=/Home/CURD/delete",
                     data:{id:id,
                         table:'search_zuanji'},
                     type:"POST",
@@ -79,17 +77,15 @@
     <td>歌手名</td>
     <td>专辑</td>
 </tr>
-<volist name="data" id="vo">
-    <tr>
-        <td>{$vo.id}</td>
-        <td>{$vo.date}</td>
-        <td>{$vo.man_name}</td>
-        <td>{$vo.zuanji}</td>
+<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+        <td><?php echo ($vo["id"]); ?></td>
+        <td><?php echo ($vo["date"]); ?></td>
+        <td><?php echo ($vo["man_name"]); ?></td>
+        <td><?php echo ($vo["zuanji"]); ?></td>
         <td>
-            <button onclick="deleteId({$vo['id']})">删除</button>
+            <button onclick="deleteId(<?php echo ($vo['id']); ?>)">删除</button>
         </td>
-    </tr>
-</volist>
+    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <table>
     <tr>
@@ -106,17 +102,12 @@
     </tr>
     <tr class="formUpdate">
         <td >
-            日期：<input type="date" id="dateUpdate">
+            用户名：<input type="text" id="nameUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
         <td >
-            歌手：<input type="text" id="man_nameUpdate">
-        </td>
-    </tr>
-    <tr class="formUpdate">
-        <td >
-            专辑：<input type="text" id="zuanjiUpdate">
+            密码：<input type="password" id="passwordUpdate">
         </td>
     </tr>
     <tr class="formUpdate">
@@ -126,19 +117,10 @@
 
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
-        <td >
-            日期：<input type="date" id="dateInsert">
-        </td>
+        <td>用户名：<input type="text" id="nameInsert"></td>
     </tr>
     <tr class="formInsert">
-        <td >
-            歌手：<input type="text" id="man_nameInsert">
-        </td>
-    </tr>
-    <tr class="formInsert">
-        <td >
-            专辑：<input type="text" id="zuanjiInsert">
-        </td>
+        <td>密码：<input type="password" id="passwordInsert"></td>
     </tr>
     <tr class="formInsert">
         <td><button id="insertSubmit">提交</button></td>

@@ -3,6 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //设置一开始的时候的表单隐藏
+            $("tr.formUpdate").css('display','none');
+            $("#update").click(function () {
+                $("tr.formUpdate").toggle();
+            });
+
+            $("tr.formInsert").css('display','none');
+            $("#insert").click(function () {
+                $("tr.formInsert").toggle();
+            });
+
+            //表单按钮跳转
+            $("#updateSubmit").click(function () {
+                //var name=document.getElementById("name").value;
+                $.ajax({url:"__MODULE__/CURD/update",
+                    data:{table:"collect",
+                        id:document.getElementById("idUpdate").value,
+                        name:document.getElementById("nameUpdate").value,
+                        zuanji:document.getElementById("zuanjiUpdate").value,
+                        song:document.getElementById("songUpdate").value,
+                        user:document.getElementById("userUpdate").value},
+                    type:"POST",
+                    datatype:"JSON",
+                    success:function(result){
+                        $("#show").html(result);
+                    }
+                });
+            });
+            $("#insertSubmit").click(function () {
+                //var name=document.getElementById("name").value;
+                $.ajax({url:"__MODULE__/CURD/insert",
+                    data:{table:"collect",
+                        name:document.getElementById("nameInsert").value,
+                        zuanji:document.getElementById("zuanjiInsert").value,
+                        song:document.getElementById("songInsert").value,
+                        user:document.getElementById("userInsert").value},
+                    type:"POST",
+                    datatype:"JSON",
+                    success:function(result){
+                        $("#show").html(result);
+                    }
+                });
+            });
+            $("button.delete").click(function () {
+                var $str=$('button.delete').val();
+                alert($str);
+            });
+        });
+        function deleteId(id) {
+
+            $.ajax({
+                    url:"__MODULE__/CURD/delete",
+                    data:{id:id,
+                        table:'collect'},
+                    type:"POST",
+                    datatype:"JSON",
+                    success:function(result){
+                        $("#show").html(result);
+                    }
+                }
+            )
+        }
+
+    </script>
 </head>
 <body>
 <table border="1">
@@ -10,18 +77,86 @@
         <td>id</td>
         <td>姓名</td>
         <td>专辑</td>
-        <td>用户</td>
         <td>歌曲</td>
+        <td>用户</td>
+
     </tr>
     <volist name="data" id="vo">
         <tr>
             <td>{$vo.id}</td>
             <td>{$vo.name}</td>
             <td>{$vo.zuanji}</td>
-            <td>{$vo.user}</td>
             <td>{$vo.song}</td>
+            <td>{$vo.user}</td>
+
+            <td>
+                <button onclick="deleteId({$vo['id']})">删除</button>
+            </td>
         </tr>
     </volist>
+</table>
+<table>
+    <tr>
+        <td><button id="insert">插入</button></td>
+        <td><button id="update">更新</button></td>
+    </tr>
+</table>
+<table>
+    <tr class="formUpdate"><td>本表更新</td></tr>
+    <tr class="formUpdate">
+        <td >
+            id：<input type="text" id="idUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            歌手姓名：<input type="text" id="nameUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            专辑：<input type="text" id="zuanjiUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            歌曲：<input type="text" id="songUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td >
+            用户：<input type="text" id="userUpdate">
+        </td>
+    </tr>
+    <tr class="formUpdate">
+        <td><button id="updateSubmit">提交</button></td>
+    </tr>
+
+
+    <tr class="formInsert"><td>数据插入</td></tr>
+    <tr class="formInsert">
+        <td >
+            歌手姓名：<input type="text" id="nameInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            专辑：<input type="text" id="zuanjiInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            歌曲：<input type="text" id="songInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td >
+            用户：<input type="text" id="userInsert">
+        </td>
+    </tr>
+    <tr class="formInsert">
+        <td><button id="insertSubmit">提交</button></td>
+    </tr>
 </table>
 </body>
 </html>

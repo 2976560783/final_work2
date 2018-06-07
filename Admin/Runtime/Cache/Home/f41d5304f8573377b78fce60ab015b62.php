@@ -109,6 +109,7 @@
     </tr>
 </table>
 <table>
+    <tr class="formUpdate"><td>本表更新</td></tr>
     <tr class="formUpdate">
         <td >
             id：<input type="text" id="idUpdate">
@@ -129,7 +130,7 @@
     </tr>
 
 
-
+    <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
         <td>用户名：<input type="text" id="nameInsert"></td>
     </tr>
