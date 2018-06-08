@@ -72,34 +72,22 @@ class IndexController extends Controller {
 
     public function collect()
     {
-        /*
-         $table=I('post.table');
-         echo 'home:Index:collect'.$table."<bt>";
-         $id=I('post.id');
-        echo 'id'.$id;
 
-        $table = M("collect");
-        $data = I('post.value');
-        $sit = I('post.sit');
-
-        echo 'data'.$data;
-        //$data['user']=session('name');
-        //echo 'user'.$data['user'];
-*/
 
         if (session('name')) {
             $tableTo=I('post.tableTo');
             $tableFrom=I('post.tableFrom');
             $id=I('post.id');
-            $data['user'] = session('name');
+            $username= session('name');
             $tableFrom=M($tableFrom);
             $resultFrom=$tableFrom->where('id='.$id)->find();
             unset($resultFrom['id']);
             $resultFrom['user']=session('name');
             $tableTo=M($tableTo);
             $tableTo->data($resultFrom)->add();
-            $result = $tableTo->select();
-
+            $condition['user']=session('name');
+            $result = $tableTo->where($condition)->select();
+           // echo session('name');
             //print_r($result);
             //echo $tableTo;
 
@@ -126,6 +114,19 @@ class IndexController extends Controller {
         $this->assign('data',$data);
         $this->display('Collect:'.$table);
 
+    }
+
+    //用户收藏的记录的删除
+    public function delete(){
+        $id=I('post.id');
+        $table=I('post.table');
+        $collect=M($table);
+        $collect->where('id='.$id)->delete();
+        $condition['user']=session('name');
+        $result=$collect->where($condition)->select();
+        $this->assign('data',$result);
+
+        $this->display('Collect:'.$table);
     }
     public function test(){
         echo 'index/test';

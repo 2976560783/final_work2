@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <script>
+        function deleteZuanji(id) {
+            $.ajax({
+                url:"/final_work2/index.php?s=/Home/Index/delete",
+                data:{id:id,
+                    table:'collect_zuanji'
+                },
+                type:'POST',
+                datatype:'JSON',
+                success:function(result){
+                    $("#showZuanji").html(result);
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 <p>专辑信息</p>
@@ -18,6 +34,7 @@
             <td><?php echo ($vo["date"]); ?></td>
             <td><?php echo ($vo["man_name"]); ?></td>
             <td><?php echo ($vo["user"]); ?></td>
+            <td><button onclick="deleteZuanji(<?php echo ($vo["id"]); ?>)" >删除</button></td>
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 </body>

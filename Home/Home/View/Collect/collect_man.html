@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <script>
+        function deleteMan(id) {
+            $.ajax({
+                url:"__MODULE__/Index/delete",
+                data:{id:id,
+                    table:'collect_man'
+                },
+                type:'POST',
+                datatype:'JSON',
+                success:function(result){
+                    $("#showMan").html(result);
+                }
+            })
+        }
+    </script>
 </head>
 <body>
 <p>歌手信息</p>
@@ -24,6 +40,7 @@
             <td>{$vo.area}</td>
             <td>{$vo.company}</td>
             <td>{$vo.user}</td>
+            <td><button onclick="deleteMan({$vo.id})" >删除</button></td>
         </tr>
     </volist>
 </table>

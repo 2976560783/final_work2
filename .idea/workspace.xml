@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a03060cc-72a5-4959-b01f-173152dfc9e1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Home/Home/View/Collect/collect_man.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Home/Home/View/Collect/collect_song.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Home/Home/View/Collect/collect_zuanji.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Admin/Runtime/Logs/Home/18_06_07.log" afterPath="$PROJECT_DIR$/Admin/Runtime/Logs/Home/18_06_07.log" />
+      <change beforePath="$PROJECT_DIR$/Admin/Home/Controller/CURDController.class.php" afterPath="$PROJECT_DIR$/Admin/Home/Controller/CURDController.class.php" />
       <change beforePath="$PROJECT_DIR$/Home/Home/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/Home/Home/Controller/IndexController.class.php" />
-      <change beforePath="$PROJECT_DIR$/Home/Home/View/Index/main.html" afterPath="$PROJECT_DIR$/Home/Home/View/Index/main.html" />
-      <change beforePath="$PROJECT_DIR$/Home/Home/View/SearchData/search_man.html" afterPath="$PROJECT_DIR$/Home/Home/View/SearchData/search_man.html" />
-      <change beforePath="$PROJECT_DIR$/Home/Home/View/SearchData/search_song.html" afterPath="$PROJECT_DIR$/Home/Home/View/SearchData/search_song.html" />
-      <change beforePath="$PROJECT_DIR$/Home/Home/View/SearchData/search_zuanji.html" afterPath="$PROJECT_DIR$/Home/Home/View/SearchData/search_zuanji.html" />
-      <change beforePath="$PROJECT_DIR$/Home/Runtime/Cache/Home/6101ad0d7f7053fcb07309ab8682f2f8.php" afterPath="$PROJECT_DIR$/Home/Runtime/Cache/Home/6101ad0d7f7053fcb07309ab8682f2f8.php" />
-      <change beforePath="$PROJECT_DIR$/Home/Runtime/Cache/Home/6948bb600fe8ff908755ae6a82e034d2.php" afterPath="$PROJECT_DIR$/Home/Runtime/Cache/Home/6948bb600fe8ff908755ae6a82e034d2.php" />
-      <change beforePath="$PROJECT_DIR$/Home/Runtime/Cache/Home/9f9c6dde5ed477c8286c5f464ac31c59.php" afterPath="$PROJECT_DIR$/Home/Runtime/Cache/Home/9f9c6dde5ed477c8286c5f464ac31c59.php" />
-      <change beforePath="$PROJECT_DIR$/Home/Runtime/Cache/Home/ef6fdc9c06a44c59ea200980ece2a9f1.php" afterPath="$PROJECT_DIR$/Home/Runtime/Cache/Home/ef6fdc9c06a44c59ea200980ece2a9f1.php" />
-      <change beforePath="$PROJECT_DIR$/Home/Runtime/Logs/Home/18_06_07.log" afterPath="$PROJECT_DIR$/Home/Runtime/Logs/Home/18_06_07.log" />
+      <change beforePath="$PROJECT_DIR$/Home/Home/View/Collect/collect_man.html" afterPath="$PROJECT_DIR$/Home/Home/View/Collect/collect_man.html" />
+      <change beforePath="$PROJECT_DIR$/Home/Home/View/Collect/collect_song.html" afterPath="$PROJECT_DIR$/Home/Home/View/Collect/collect_song.html" />
+      <change beforePath="$PROJECT_DIR$/Home/Home/View/Collect/collect_zuanji.html" afterPath="$PROJECT_DIR$/Home/Home/View/Collect/collect_zuanji.html" />
+      <change beforePath="$PROJECT_DIR$/Home/Runtime/Cache/Home/1b9d3460895798d310c3cb93ea2c2c7d.php" afterPath="$PROJECT_DIR$/Home/Runtime/Cache/Home/1b9d3460895798d310c3cb93ea2c2c7d.php" />
+      <change beforePath="$PROJECT_DIR$/Home/Runtime/Cache/Home/7b51fa4577960d9926c77d4949d54b14.php" afterPath="$PROJECT_DIR$/Home/Runtime/Cache/Home/7b51fa4577960d9926c77d4949d54b14.php" />
+      <change beforePath="$PROJECT_DIR$/Home/Runtime/Cache/Home/9f1be904cdba9e579ca5ac744b8901bd.php" afterPath="$PROJECT_DIR$/Home/Runtime/Cache/Home/9f1be904cdba9e579ca5ac744b8901bd.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="collect_zuanji.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_zuanji.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="966">
+              <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CURDController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/Home/Controller/CURDController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="966">
+              <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -43,8 +47,8 @@
       <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state relative-caret-position="2852">
+              <caret line="124" column="16" lean-forward="true" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -54,7 +58,17 @@
         <entry file="file://$PROJECT_DIR$/admin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
-              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -63,8 +77,8 @@
       <file leaf-file-name="collect_man.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_man.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+            <state relative-caret-position="966">
+              <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -73,18 +87,8 @@
       <file leaf-file-name="collect_song.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_song.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collect_zuanji.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_zuanji.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="460">
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -93,8 +97,18 @@
       <file leaf-file-name="search_song.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home/Home/View/SearchData/search_song.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="437">
               <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_man.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Home/Home/View/SearchData/search_man.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -105,16 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
               <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Home/Home/View/Index/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -154,19 +158,19 @@
         <option value="$PROJECT_DIR$/Admin/Home/View/Table/collect.html" />
         <option value="$PROJECT_DIR$/Admin/Home/View/Table/search_song.html" />
         <option value="$PROJECT_DIR$/Admin/Home/View/Table/search_zuanji.html" />
-        <option value="$PROJECT_DIR$/Admin/Home/Controller/CURDController.class.php" />
         <option value="$PROJECT_DIR$/Home/Home/View/Index/show.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/Collect/zuanji.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/Collect/man.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/Collect/song.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/SearchData/search_man.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/Index/main.html" />
-        <option value="$PROJECT_DIR$/Home/Home/View/Collect/collect_song.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/SearchData/search_zuanji.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/SearchData/search_song.html" />
+        <option value="$PROJECT_DIR$/Home/Home/View/Collect/collect_song.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/Collect/collect_man.html" />
         <option value="$PROJECT_DIR$/Home/Home/View/Collect/collect_zuanji.html" />
         <option value="$PROJECT_DIR$/Home/Home/Controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/Admin/Home/Controller/CURDController.class.php" />
       </list>
     </option>
   </component>
@@ -178,8 +182,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="225" />
-    <option name="y" value="57" />
+    <option name="x" value="363" />
+    <option name="y" value="111" />
     <option name="width" value="1423" />
     <option name="height" value="941" />
   </component>
@@ -201,14 +205,81 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Collect" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="final_work2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_work2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SearchData" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -264,14 +335,16 @@
       <workItem from="1528330203678" duration="5594000" />
       <workItem from="1528336630145" duration="8657000" />
       <workItem from="1528366681690" duration="6496000" />
+      <workItem from="1528454992001" duration="1994000" />
+      <workItem from="1528457028661" duration="3386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61803000" />
+    <option name="totallyTimeSpent" value="67183000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="225" y="57" width="1423" height="941" extended-state="0" />
+    <frame x="363" y="111" width="1423" height="941" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23629893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -513,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -521,7 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -529,9 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
           <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <marker date="1528287044172" expanded="true" signature="448:467" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -539,7 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="989">
           <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -547,67 +614,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1794">
           <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Home/View/Table/admin_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/man.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/song.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/zuanji.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/man.html" />
+    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/song.html" />
+    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/zuanji.html" />
     <entry file="file://$PROJECT_DIR$/Admin/Home/View/Index/operate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Home/View/Index/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,14 +631,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Home/View/Table/admin_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="65" column="21" lean-forward="false" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/Home/Controller/CURDController.class.php">
+    <entry file="file://$PROJECT_DIR$/Home/Home/View/Index/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="368">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_man.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_song.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_zuanji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Home/Home/View/SearchData/search_man.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -637,48 +700,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Home/Home/View/SearchData/search_song.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="437">
           <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Home/View/SearchData/search_man.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_song.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_man.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Home/Home/View/Collect/collect_zuanji.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Home/Home/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="2852">
+          <caret line="124" column="16" lean-forward="true" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Home/Controller/CURDController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -686,7 +725,7 @@
     <entry file="file://$PROJECT_DIR$/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>

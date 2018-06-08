@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <script>
+        function deleteSong(id) {
+            $.ajax({
+                url:"/final_work2/index.php?s=/Home/Index/delete",
+                data:{id:id,
+                    table:'collect_song'
+                },
+                type:'POST',
+                datatype:'JSON',
+                success:function(result){
+                    $("#showSong").html(result);
+                }
+            })
+        }
+    </script>
 </head>
 <body>
 <p>歌曲信息</p>
@@ -26,6 +42,7 @@
             <td><?php echo ($vo["sequence"]); ?></td>
             <td><?php echo ($vo["singer"]); ?></td>
             <td><?php echo ($vo["user"]); ?></td>
+            <td><button onclick="deleteSong(<?php echo ($vo["id"]); ?>)" >删除</button></td>
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 </body>
