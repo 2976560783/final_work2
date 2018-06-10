@@ -91,14 +91,30 @@
 <p>操作数据</p>
 
 <!-- 高级版  -->
-<p id="manager" style="color:red;font-size:16px;">管理用户数据</p>
-<button id="admin_user" class="userManager">管理员数据管理</button><br>
-<button id="user" class="userManager">普通用户数据管理</button><br>
-<p id="dataManager" style="color:red;font-size:16px;">系统数据管理</p>
-<button id="collect" class="data">用户收藏歌曲专辑歌手信息</button><br>
-<button id="search_man" class="data">系统歌手数据</button><br>
-<button id="search_song" class="data">系统歌曲数据</button><br>
-<button id="search_zuanji" class="data">系统专辑数据</button><br>
+<table>
+    <tr>
+        <th>
+            <p id="manager" style="color:red;font-size:16px;">管理用户数据</p>
+        </th>
+    </tr>
+    <tr><td><button id="admin_user" class="userManager">管理员数据管理</button></td></tr>
+    <tr><td><button id="user" class="userManager">普通用户数据管理</button></td></tr>
+</table>
+<table>
+    <tr><th><p id="dataManager" style="color:red;font-size:16px;">系统数据管理</p></th></tr>
+    <tr><td><button id="collect" class="data">用户收藏歌曲专辑歌手信息</button></td></tr>
+    <tr><td><button id="search_man" class="data">系统歌手数据</button></td></tr>
+    <tr><td><button id="search_song" class="data">系统歌曲数据</button></td></tr>
+    <tr><td><button id="search_zuanji" class="data">系统专辑数据</button></td></tr>
+</table>
+
+
+
+
+
+
+
+
 
 <!--
 <select>
@@ -730,22 +746,21 @@
 
     <tr class="formInsert"><td>数据插入</td></tr>
     <tr class="formInsert">
-    <tr class="formInsert">
         <td >
             姓名：<input type="text" id="nameInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             性别：<input type="text" id="sexInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             地区：<input type="text" id="areaInsert">
         </td>
     </tr>
-    <tr class="formUpdate">
+    <tr class="formInsert">
         <td >
             公司：<input type="text" id="companyInsert">
         </td>
