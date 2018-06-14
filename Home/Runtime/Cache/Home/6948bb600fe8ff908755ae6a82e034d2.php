@@ -25,10 +25,41 @@
             )
         }
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #FF00FF;
+            padding:3px 7px 2px 7px;
+        }
+
+        #customers th
+        {
+            font-size:1.1em;
+            text-align:left;
+            padding-top:5px;
+            padding-bottom:4px;
+            background-color:#FF00FF;
+            color:#FF00FF;
+        }
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#FF00FF;
+        }
+    </style>
 </head>
 <body>
 <p>专辑信息</p>
-<table border="1">
+<table border="1" id="customers">
     <tr>
         <td>专辑编号</td>
         <td>发行日期</td>

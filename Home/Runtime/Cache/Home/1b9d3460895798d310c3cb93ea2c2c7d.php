@@ -19,19 +19,50 @@
             })
         }
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #98bf21;
+            padding:3px 7px 2px 7px;
+        }
+
+        #customers th
+        {
+            font-size:1.1em;
+            text-align:left;
+            padding-top:5px;
+            padding-bottom:4px;
+            background-color:#A7C942;
+            color:#ffffff;
+        }
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#EAF2D3;
+        }
+    </style>
 </head>
 <body>
 <p>歌曲信息</p>
-<table border="1">
+<table border="1" id="customers">
     <tr>
-        <th>歌曲编号</th>
-        <th>专辑名</th>
-        <th>歌曲风格</th>
-        <th>语种</th>
-        <th>歌手编号</th>
-        <th>点播频率</th>
-        <th>歌手姓名</th>
-        <th>用户</th>
+        <th style="font-family:arial;color:blue;font-size:20px;">歌曲编号</th>
+        <th style="font-family:arial;color:blue;font-size:20px;">专辑名</th>
+        <th style="font-family:arial;color:blue;font-size:20px;">歌曲风格</th>
+        <th style="font-family:arial;color:blue;font-size:20px;">语种</th>
+        <th style="font-family:arial;color:blue;font-size:20px;">歌手编号</th>
+        <th style="font-family:arial;color:blue;font-size:20px;">点播频率</th>
+        <th style="font-family:arial;color:blue;font-size:20px;">歌手姓名</th>
+        <th style="font-family:arial;color:blue;font-size:20px;">用户</th>
     </tr>
     <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
             <td><?php echo ($vo["id"]); ?></td>

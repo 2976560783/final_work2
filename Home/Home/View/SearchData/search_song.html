@@ -25,10 +25,33 @@
             )
         }
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #FF00FF;
+            padding:3px 7px 2px 7px;
+        }
+
+
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#FF00FF;
+        }
+    </style>
 </head>
 <body>
 <p>歌曲信息</p>
-<table border="1">
+<table border="1" id="customers">
     <tr>
         <th>歌曲编号</th>
         <th>专辑名</th>

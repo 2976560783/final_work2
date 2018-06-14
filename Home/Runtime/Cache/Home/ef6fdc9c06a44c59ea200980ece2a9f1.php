@@ -22,7 +22,8 @@
         $(document).ready(function () {
             $("#showCollectMan").click(function () {
                 $.ajax({url:"/final_work2/index.php?s=/Home/Index/show",
-                    data:{table:"collect_man"},
+                    data:{table:"collect_man",
+                    page:"page"},
                     type:"POST",
                     datatype:"JSON",
                     success:function(result){
@@ -55,11 +56,21 @@
             });
         })
     </script>
+    <style>
+        button{
+            height: 30px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+
 </head>
-<body>
+<body background="./Public/images/weather.png">
 <table>
     <tr>
-        <td><button id="showCollectMan">查看已收藏歌手</button></td>
+        <td><button id="showCollectMan" class="btn btn-block btn-info">查看已收藏歌手</button></td>
     </tr>
     <tr>
         <td><button id="showCollectSong">查看已收藏歌曲</button></td>
@@ -71,14 +82,14 @@
 
 <table>
     <tr>
-        <td><div id="showMan"></div></td>
+        <td><div id="showMan" ></div></td>
         <td><div id="showSong"></div></td>
         <td><div id="showZuanji"></div></td>
     </tr>
 </table>
 
 <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="100%" color=#987cb9 SIZE=1>
-<p>输入搜索框，可以输入歌手，歌曲，专辑名查询</p>
+<p style="font-family:arial;color:red;font-size:20px;">输入搜索框，可以输入歌手，歌曲，专辑名查询</p>
 <input type="text" id="data" onkeyup="searchData()"/>
 <div id="showSearch"></div>
 <!--

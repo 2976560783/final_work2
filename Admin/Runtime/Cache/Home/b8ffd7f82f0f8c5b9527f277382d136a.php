@@ -86,8 +86,22 @@
 
         });
     </script>
+    <style>
+        .kj
+        {
+            background:url(./Public/images/xuanku.png);
+            background-size: 100% 100%;
+        }
+        button{
+            height: 30px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
 </head>
-<body>
+<body class="kj">
 <p>操作数据</p>
 
 <!-- 高级版  -->
@@ -245,10 +259,40 @@
             )
         }
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
 
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #FF00FF;
+            padding:3px 7px 2px 7px;
+        }
+
+        #customers th
+        {
+            font-size:1.1em;
+            text-align:left;
+            padding-top:5px;
+            padding-bottom:4px;
+            background-color:#FF00FF;
+            color:#00FFFF;
+        }
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#FF00FF;
+        }
+    </style>
 </head>
 <body>
-<table border="1">
+<table border="1" id="customers">
     <tr>
         <td>id</td>
         <td>用户名</td>
@@ -393,9 +437,40 @@
         }
 
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #FF00FF;
+            padding:3px 7px 2px 7px;
+        }
+
+        #customers th
+        {
+            font-size:1.1em;
+            text-align:left;
+            padding-top:5px;
+            padding-bottom:4px;
+            background-color:#FF00FF;
+            color:#00FFFF;
+        }
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#FF00FF;
+        }
+    </style>
 </head>
 <body>
-<table border="1">
+<table border="1" id="customers">
     <tr>
         <td>id</td>
         <td>歌手姓名</td>
@@ -552,9 +627,40 @@
         }
 
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #FF00FF;
+            padding:3px 7px 2px 7px;
+        }
+
+        #customers th
+        {
+            font-size:1.1em;
+            text-align:left;
+            padding-top:5px;
+            padding-bottom:4px;
+            background-color:#FF00FF;
+            color:#00FFFF;
+        }
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#FF00FF;
+        }
+    </style>
 </head>
 <body>
-<table border="1">
+<table border="1" id="customers">
     <tr>
         <td>id</td>
         <td>姓名</td>
@@ -685,9 +791,40 @@
         }
 
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #FF00FF;
+            padding:3px 7px 2px 7px;
+        }
+
+        #customers th
+        {
+            font-size:1.1em;
+            text-align:left;
+            padding-top:5px;
+            padding-bottom:4px;
+            background-color:#FF00FF;
+            color:#00FFFF;
+        }
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#FF00FF;
+        }
+    </style>
 </head>
 <body>
-<table border="1">
+<table border="1" id="customers">
 <tr>
     <td>id</td>
     <td>姓名</td>
@@ -853,9 +990,40 @@
         }
 
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #FF00FF;
+            padding:3px 7px 2px 7px;
+        }
+
+        #customers th
+        {
+            font-size:1.1em;
+            text-align:left;
+            padding-top:5px;
+            padding-bottom:4px;
+            background-color:#FF00FF;
+            color:#00FFFF;
+        }
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#FF00FF;
+        }
+    </style>
 </head>
 <body>
-<table border="1">
+<table border="1" id="customers">
 <tr>
     <td>id</td>
     <td>歌曲</td>
@@ -1043,9 +1211,40 @@
             )
         }
     </script>
+    <style type="text/css">
+        #customers
+        {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        #customers td, #customers th
+        {
+            font-size:1em;
+            border:1px solid #FF00FF;
+            padding:3px 7px 2px 7px;
+        }
+
+        #customers th
+        {
+            font-size:1.1em;
+            text-align:left;
+            padding-top:5px;
+            padding-bottom:4px;
+            background-color:#FF00FF;
+            color:#00FFFF;
+        }
+
+        #customers tr.alt td
+        {
+            color:#000000;
+            background-color:#FF00FF;
+        }
+    </style>
 </head>
 <body>
-<table border="1">
+<table border="1" id="customers">
 <tr>
     <td>id</td>
     <td>日期</td>
